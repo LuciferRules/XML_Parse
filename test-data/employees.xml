@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="1">
+        <profile>
+            <name>John Doe</name>
+            <age>30</age>
+        </profile>
+        <position>Software Engineer</position>
+        <department>IT</department>
+        <salary>80000</salary>
+    </employee>
+    <employee id="2">
+        <profile>
+            <name>Jane Smith</name>
+            <age>28</age>
+        </profile>
+        <position>Project Manager</position>
+        <department>Operations</department>
+        <salary>90000</salary>
+    </employee>
+    <employee id="3">
+        <profile>
+            <name>Emily Johnson</name>
+            <age>26</age>
+        </profile>
+        <position>Data Analyst</position>
+        <department>IT</department>
+        <salary>70000</salary>
+    </employee>
+    <employee id="4">
+        <profile>
+            <name>Michael Brown</name>
+            <age>32</age>
+        </profile>
+        <position>Graphic Designer</position>
+        <department>Marketing</department>
+        <salary>65000</salary>
+    </employee>
+    <employee id="5">
+        <profile>
+            <name>Sarah Wilson</name>
+            <age>29</age>
+        </profile>
+        <position>Human Resources Specialist</position>
+        <department>HR</department>
+        <salary>60000</salary>
+    </employee>
+    <employee id="6">
+        <profile>
+            <name>David Lee</name>
+            <age>35</age>
+        </profile>
+        <position>Systems Administrator</position>
+        <department>IT</department>
+        <salary>75000</salary>
+    </employee>
+    <employee id="7">
+        <profile>
+            <name>Laura Garcia</name>
+            <age>27</age>
+        </profile>
+        <position>Content Writer</position>
+        <department>Marketing</department>
+        <salary>55000</salary>
+    </employee>
+    <employee id="8">
+        <profile>
+            <name>James Martinez</name>
+            <age>26</age>
+        </profile>
+        <position>Sales Associate</position>
+        <department>Sales</department>
+        <salary>50000</salary>
+    </employee>
+</employees>

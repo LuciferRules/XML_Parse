@@ -1,0 +1,5 @@
+<books>
+    <book id="1" price="10.99">
+        <author>F. Scott Fitzgerald</author>
+    </book>
+</books>

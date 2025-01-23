@@ -1,0 +1,6 @@
+<books>
+    <book id="2" price="12.99">
+        <title%O> To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+    </book>
+</books>

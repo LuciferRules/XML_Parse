@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MapData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:semi-org:xsd.E142-1.V1005.SubstrateMap">
+  <Layouts>
+    <Layout LayoutId="StripLayout" DefaultUnits="mm" TopLevel="true">
+      <Dimension X="1" Y="1" />
+      <ProductId>P000121245</ProductId>
+      <ChildLayouts>
+        <ChildLayout LayoutId="ChipLayout" />
+      </ChildLayouts>
+    </Layout>
+    <Layout LayoutId="ChipLayout" DefaultUnits="mm">
+      <Dimension X="16" Y="2" />
+    </Layout>
+  </Layouts>
+  <Substrates>
+    <Substrate SubstrateType="Strip" SubstrateId="3138096886">
+      <LotId>VC339684G09</LotId>
+      <CarrierId />
+      <SlotNumber>0</SlotNumber>
+    </Substrate>
+  </Substrates>
+  <SubstrateMaps>
+    <SubstrateMap SubstrateType="Strip" SubstrateId="3138096886" LayoutSpecifier="StripLayout/ChipLayout">
+      <Overlay MapName="BinCodeMap" MapVersion="2023122203122473">
+        <BinCodeMap BinType="Integer2" NullBin="FFFF">
+          <BinDefinitions>
+            <BinDefinition BinCode="0001" BinCount="32" BinQuality="Pass" BinDescription="Pass  bins" Pick="true" />
+            <BinDefinition BinCode="0000" BinCount="0" BinQuality="Unknown" BinDescription="Not processed" />
+          </BinDefinitions>
+          <BinCode>0001000100010001000100010001000100010001000100010001000100010001</BinCode>
+          <BinCode>0001000100010001000100010001000100010001000100010001000100010001</BinCode>
+        </BinCodeMap>
+      </Overlay>
+      <Overlay MapName="ExternalDeviceIdMap" MapVersion="1">
+        <DeviceIdMap>
+          <Id X="0" Y="1">9999900095</Id>
+          <Id X="1" Y="1">9999900093</Id>
+          <Id X="2" Y="1">9999900091</Id>
+          <Id X="3" Y="1">9999900089</Id>
+          <Id X="4" Y="1">9999900087</Id>
+          <Id X="5" Y="1">9999900085</Id>
+          <Id X="6" Y="1">9999900083</Id>
+          <Id X="7" Y="1">9999900081</Id>
+          <Id X="8" Y="1">9999900079</Id>
+          <Id X="9" Y="1">9999900077</Id>
+          <Id X="10" Y="1">9999900075</Id>
+          <Id X="11" Y="1">9999900073</Id>
+          <Id X="12" Y="1">9999900071</Id>
+          <Id X="13" Y="1">9999900069</Id>
+          <Id X="14" Y="1">9999900067</Id>
+          <Id X="15" Y="1">9999900065</Id>
+          <Id X="0" Y="0">9999900096</Id>
+          <Id X="1" Y="0">9999900094</Id>
+          <Id X="2" Y="0">9999900092</Id>
+          <Id X="3" Y="0">9999900090</Id>
+          <Id X="4" Y="0">9999900088</Id>
+          <Id X="5" Y="0">9999900086</Id>
+          <Id X="6" Y="0">9999900084</Id>
+          <Id X="7" Y="0">9999900082</Id>
+          <Id X="8" Y="0">9999900080</Id>
+          <Id X="9" Y="0">9999900078</Id>
+          <Id X="10" Y="0">9999900076</Id>
+          <Id X="11" Y="0">9999900074</Id>
+          <Id X="12" Y="0">9999900072</Id>
+          <Id X="13" Y="0">9999900070</Id>
+          <Id X="14" Y="0">9999900068</Id>
+          <Id X="15" Y="0">9999900066</Id>
+        </DeviceIdMap>
+      </Overlay>
+      <Overlay MapName="WaferToStrip">
+        <TransferMap FromSubstrateType="Wafer" FromSubstrateId="VC339684.05" FromLayoutSpecifier="">
+          <T FX="4" FY="17" TX="14" TY="0" />
+          <T FX="4" FY="18" TX="15" TY="0" />
+          <T FX="4" FY="19" TX="15" TY="1" />
+          <T FX="4" FY="20" TX="14" TY="1" />
+          <T FX="4" FY="22" TX="12" TY="0" />
+          <T FX="4" FY="23" TX="13" TY="0" />
+          <T FX="4" FY="24" TX="13" TY="1" />
+          <T FX="4" FY="25" TX="12" TY="1" />
+          <T FX="4" FY="26" TX="10" TY="0" />
+          <T FX="4" FY="27" TX="11" TY="0" />
+          <T FX="4" FY="28" TX="11" TY="1" />
+          <T FX="4" FY="29" TX="10" TY="1" />
+          <T FX="4" FY="30" TX="8" TY="0" />
+          <T FX="4" FY="31" TX="9" TY="0" />
+          <T FX="4" FY="32" TX="9" TY="1" />
+          <T FX="4" FY="33" TX="8" TY="1" />
+          <T FX="4" FY="35" TX="6" TY="0" />
+          <T FX="4" FY="36" TX="7" TY="0" />
+          <T FX="4" FY="37" TX="7" TY="1" />
+          <T FX="4" FY="38" TX="6" TY="1" />
+          <T FX="4" FY="39" TX="4" TY="0" />
+          <T FX="4" FY="40" TX="5" TY="0" />
+          <T FX="4" FY="41" TX="5" TY="1" />
+          <T FX="4" FY="42" TX="4" TY="1" />
+          <T FX="4" FY="43" TX="2" TY="0" />
+          <T FX="4" FY="45" TX="3" TY="0" />
+          <T FX="4" FY="46" TX="3" TY="1" />
+          <T FX="4" FY="47" TX="2" TY="1" />
+          <T FX="4" FY="48" TX="0" TY="0" />
+          <T FX="4" FY="49" TX="1" TY="0" />
+          <T FX="4" FY="50" TX="1" TY="1" />
+          <T FX="4" FY="51" TX="0" TY="1" />
+        </TransferMap>
+      </Overlay>
+      <Overlay MapName="OpticalMultiChipID:StripMultiChipID" MapVersion="1">
+        <DeviceIdMap>
+          <Id X="0" Y="1">9999900095:263-7HM-DF-LR:MKZ</Id>
+          <Id X="1" Y="1">9999900093:263-7HM-DF-LR:MKZ</Id>
+          <Id X="2" Y="1">9999900091:263-7HM-DF-LR:MKZ</Id>
+          <Id X="3" Y="1">9999900089:263-7HM-DF-LR:MKZ</Id>
+          <Id X="4" Y="1">9999900087:263-7HM-DF-LR:MKZ</Id>
+          <Id X="5" Y="1">9999900085:263-7HM-DF-LR:MKZ</Id>
+          <Id X="6" Y="1">9999900083:263-7HM-DF-LR:MKZ</Id>
+          <Id X="7" Y="1">9999900081:263-7HM-DF-LR:MKZ</Id>
+          <Id X="8" Y="1">9999900079:263-7HM-DF-LR:MKZ</Id>
+          <Id X="9" Y="1">9999900077:263-7HM-DF-LR:MKZ</Id>
+          <Id X="10" Y="1">9999900075:263-7HM-DF-LR:MKZ</Id>
+          <Id X="11" Y="1">9999900073:263-7HM-DF-LR:MKZ</Id>
+          <Id X="12" Y="1">9999900071:263-7HM-DF-LR:MKZ</Id>
+          <Id X="13" Y="1">9999900069:263-7HM-DF-LR:MKZ</Id>
+          <Id X="14" Y="1">9999900067:263-7HM-DF-LR:MKZ</Id>
+          <Id X="15" Y="1">9999900065:263-7HM-DF-LR:MKZ</Id>
+          <Id X="0" Y="0">9999900096:263-7HM-DF-LR:MKZ</Id>
+          <Id X="1" Y="0">9999900094:263-7HM-DF-LR:MKZ</Id>
+          <Id X="2" Y="0">9999900092:263-7HM-DF-LR:MKZ</Id>
+          <Id X="3" Y="0">9999900090:263-7HM-DF-LR:MKZ</Id>
+          <Id X="4" Y="0">9999900088:263-7HM-DF-LR:MKZ</Id>
+          <Id X="5" Y="0">9999900086:263-7HM-DF-LR:MKZ</Id>
+          <Id X="6" Y="0">9999900084:263-7HM-DF-LR:MKZ</Id>
+          <Id X="7" Y="0">9999900082:263-7HM-DF-LR:MKZ</Id>
+          <Id X="8" Y="0">9999900080:263-7HM-DF-LR:MKZ</Id>
+          <Id X="9" Y="0">9999900078:263-7HM-DF-LR:MKZ</Id>
+          <Id X="10" Y="0">9999900076:263-7HM-DF-LR:MKZ</Id>
+          <Id X="11" Y="0">9999900074:263-7HM-DF-LR:MKZ</Id>
+          <Id X="12" Y="0">9999900072:263-7HM-DF-LR:MKZ</Id>
+          <Id X="13" Y="0">9999900070:263-7HM-DF-LR:MKZ</Id>
+          <Id X="14" Y="0">9999900068:263-7HM-DF-LR:MKZ</Id>
+          <Id X="15" Y="0">9999900066:263-7HM-DF-LR:MKZ</Id>
+        </DeviceIdMap>
+      </Overlay>
+    </SubstrateMap>
+  </SubstrateMaps>
+</MapData>
