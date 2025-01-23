@@ -55,5 +55,31 @@ public class readTransferMap {
         } else {
             System.out.println("No TransferMap element found.");
         }
+
+        printDeviceIdMap(xPath, doc);
+
+    }
+
+    public static void printDeviceIdMap (XPath xPath, Document doc) throws XPathExpressionException {
+        String expression2 = "//DeviceIdMap";
+        Node transferMapNode2 = (Node) xPath.compile(expression2).evaluate(doc, XPathConstants.NODE);
+        if (transferMapNode2 != null) {
+            Element transferMapElement2 = (Element) transferMapNode2;
+            // Get the id elements
+            NodeList idElements = transferMapElement2.getElementsByTagName("Id");
+
+            // count id elements
+            int countId = idElements.getLength();
+            System.out.println("countId total=" + countId);
+
+            for (int j = 0; j < idElements.getLength(); j++){
+                Node idNode = idElements.item(j);
+                Element idElement = (Element) idNode;
+                System.out.println("id element: ");
+                System.out.print("X= " + idElement.getAttribute("X"));
+                System.out.println();
+                System.out.println("Y= " + idElement.getAttribute("Y"));
+            }
+        }
     }
 }
