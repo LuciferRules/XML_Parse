@@ -69,19 +69,19 @@
       </Overlay>
       <Overlay MapName="WaferToStrip">
         <TransferMap FromSubstrateType="Wafer" FromSubstrateId="VC339684.05" FromLayoutSpecifier="">
-          <T FX="15" FY="56" TX="14" TY="0" />
+          <T FX="15" FY="56" TX="15" TY="0" />
           <T FX="15" FY="54" TX="15" TY="0" />
           <T FX="15" FY="52" TX="15" TY="1" />
-          <T FX="15" FY="51" TX="14" TY="1" />
-          <T FX="15" FY="50" TX="12" TY="0" />
-          <T FX="15" FY="49" TX="13" TY="0" />
-          <T FX="15" FY="48" TX="13" TY="1" />
-          <T FX="15" FY="47" TX="12" TY="1" />
+          <T FX="15" FY="51" TX="15" TY="1" />
+          <T FX="15" FY="50" TX="14" TY="0" />
+          <T FX="15" FY="49" TX="14" TY="0" />
+          <T FX="15" FY="48" TX="14" TY="1" />
+          <T FX="15" FY="47" TX="14" TY="1" />
+          <T FX="15" FY="45" TX="13" TY="0" />
+          <T FX="15" FY="44" TX="13" TY="0" />
+          <T FX="15" FY="43" TX="13" TY="1" />
+          <T FX="15" FY="42" TX="13" TY="1" />
           <T FX="15" FY="46" TX="10" TY="0" />
-          <T FX="15" FY="45" TX="11" TY="0" />
-          <T FX="15" FY="44" TX="11" TY="1" />
-          <T FX="15" FY="43" TX="10" TY="1" />
-          <T FX="15" FY="42" TX="8" TY="0" />
           <T FX="15" FY="41" TX="9" TY="0" />
           <T FX="15" FY="40" TX="9" TY="1" />
           <T FX="15" FY="39" TX="8" TY="1" />
