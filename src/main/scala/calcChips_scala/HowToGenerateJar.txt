@@ -1,0 +1,69 @@
+1. setup environment
+export JAVA_HOME="/c/Program Files/Java/jdk-11.0.0.2"
+export PATH=$JAVA_HOME/bin:$PATH
+
+2. check java version
+echo $JAVA_HOME
+java -version
+javac -version
+
+3. build jar
+mvn clean package assembly:single
+
+4. check jar
+jar tf target/calcChips_arg-jar-with-dependencies.jar
+jar tf target/calcChips_arg_Spark-jar-with-dependencies.jar
+
+5. run in intellij
+java -jar target/calcChips_arg-jar-with-dependencies.jar \
+  test-data/PDBSESE174/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml \
+  test-data/PDBSESE174/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml
+
+6. run in linux RHEL9
+-- local mode
+spark-submit \
+  --class calcChips_scala.calcChips_arg \
+  --master local[*] \
+  --deploy-mode client \
+  /home/knight/Applications/test-data/calcChips_arg-jar-with-dependencies.jar \
+  /home/knight/Applications/test-data/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml \
+  /home/knight/Applications/test-data/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml
+
+-- yarn mode: get the files inside hdfs and run in cluster
+hdfs dfsadmin -safemode leave
+spark-submit \
+  --class calcChips_scala.calcChips_arg \
+  --master yarn \
+  --deploy-mode client \
+  --num-executors 2 \
+  --executor-cores 2 \
+  --executor-memory 4G \
+  /home/knight/Applications/test-data/calcChips_arg-jar-with-dependencies.jar \
+  "hdfs:///datastore/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml" \
+  "hdfs:///datastore/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml"
+
+spark-submit \
+  --class calcChips_scala.calcChips_arg \
+  --master yarn \
+  --deploy-mode client \
+  --num-executors 2 \
+  --executor-cores 2 \
+  --executor-memory 4G \
+  /home/knight/Applications/test-data/calcChips_arg_Spark-jar-with-dependencies.jar \
+  "hdfs:///datastore/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml" \
+  "hdfs:///datastore/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml"
+
+
+7. troubleshoot if cannot run spark-submit in console
+✅ 2. Check if HDFS Client JARs are Missing
+Your Spark JARs list does not include hadoop-hdfs-client-*.jar, which is required for Spark to recognize hdfs://.
+Check if it's missing:
+
+ls /home/knight/Applications/hadoop-3.4.0/share/hadoop/hdfs/lib | grep hdfs
+
+If it’s missing, copy it to Spark’s JARs folder:
+cp /home/knight/Applications/hadoop-3.4.0/share/hadoop/hdfs/hadoop-hdfs-client-3.4.0.jar $SPARK_HOME/jars/
+cp /home/knight/Applications/hadoop-3.4.0/share/hadoop/common/hadoop-common-3.4.0.jar $SPARK_HOME/jars/
+cp /home/knight/Applications/hadoop-3.4.0/share/hadoop/common/lib/hadoop-auth-3.4.0.jar $SPARK_HOME/jars/
+
+Then restart Spark and retry.

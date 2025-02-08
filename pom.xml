@@ -9,11 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.13.8</scala.version>
-        <scala.binary.version>2.13</scala.binary.version>
+        <scala.version>2.12.8</scala.version>
+        <scala.binary.version>2.12</scala.binary.version>
+
+        <hadoop.version>3.4.0</hadoop.version>
+        <spark.version>3.5.3</spark.version>
     </properties>
 
     <dependencies>
@@ -50,6 +53,22 @@
             <artifactId>scala-xml_${scala.binary.version}</artifactId>
             <version>2.1.0</version>
         </dependency>
+
+        <!-- Spark dependencies -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.binary.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Hadoop dependencies -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -99,6 +118,37 @@
                     </archive>
                 </configuration>
             </plugin>
+
+            <!--  Scala assembly plugin for calcChips_arg.scala  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <finalName>calcChips_arg_Spark</finalName> <!-- Custom JAR name= calcChips_arg -->
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>calcChips_scala.calcChips_arg_Spark</mainClass>  <!-- Change to your main class=calcChips_arg -->
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+
         </plugins>
     </build>
+
 </project>
