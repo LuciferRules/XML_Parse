@@ -1,0 +1,28 @@
+1. setup environment
+export JAVA_HOME="/c/Program Files/Java/jdk-11.0.0.2"
+export PATH=$JAVA_HOME/bin:$PATH
+
+2. check java version
+echo $JAVA_HOME
+java -version
+javac -version
+
+3. build jar
+mvn clean package assembly:single
+
+4. check jar
+jar tf target/calcChips_arg-jar-with-dependencies.jar
+
+5. run in intellij
+java -jar target/calcChips_arg-jar-with-dependencies.jar \
+  test-data/PDBSESE174/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml \
+  test-data/PDBSESE174/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml
+
+6. run in linux RHEL9
+spark-submit \
+  --class calcChips_scala.calcChips_arg \
+  --master local[*] \
+  --deploy-mode client \
+  /home/knight/Applications/test-data/calcChips_arg-jar-with-dependencies.jar \
+  /home/knight/Applications/test-data/E142_STRIPMAP_VC339684G09_3138096870_PDBSESE174_20240130T122947+08.xml \
+  /home/knight/Applications/test-data/E142_STRIPMAP_VC339684G09_3138096869_PDBSESE174_20240130T123000+08.xml
